@@ -1,7 +1,7 @@
 <template>
     <div>
         <base-header class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center"
-                     style="min-height: 400px; background-image:  background-size: cover; background-position: center top;">
+                     style="min-height: 400px; background-image:  background-size:cover; background-position: center top;">
             <!-- Mask -->
             <span class="mask bg-gradient-success opacity-8"></span>
             <!-- Header container -->
@@ -23,7 +23,7 @@
                                     <h3 class="mb-0">Company Profile</h3>
                                 </div>
                                 <div class="col-4 text-right">
-                                  <h1>{{description}}</h1>
+                                    <h3 class="mb-0">{{description}}</h3>
                                 </div>
                             </div>
                         </div>
@@ -68,16 +68,14 @@
 
 
 
-
 <script>
     import axios from 'axios'
   export default {
     name: 'company-registrations',
       data() {
           return {
-                  name: '',
-              description: 'rest',
-
+              name: '',
+              description: '',
           }
       },
       methods: {
@@ -88,17 +86,14 @@
                           latitute: 0,
                       }).then((response) => {
                           if(response.data.status !== 200){
-                              let message = this.name + " " + "company profile successfully created.";
                               console.log(response)
-                              alert(message);
+                              this.description = this.name + " " + "company profile successfully created.";;
                           }else {
-                              let description = response.data.description;
                               console.log(response)
-                              alert(description)
-
+                              this.description = response.data.description;
                           }}) .catch(function (error) {
                             console.log(error);
-                            alert("Service is unavaliable please try again later.");
+                            this.description = "Service is unavaliable please try again later.";
             });
                   },
               },
