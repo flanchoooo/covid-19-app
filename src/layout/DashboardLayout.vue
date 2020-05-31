@@ -14,7 +14,7 @@
           }"
         />
 
-        <sidebar-item :link="{name: 'Company Registration', icon: 'ni ni-building text-blue', path: '/icons'}"/>
+        <sidebar-item :link="{name: 'Company Registration', icon: 'ni ni-building text-blue', path: '/company'}"/>
         <sidebar-item :link="{name: 'Questionnaire Configuration', icon: 'ni ni-user-run text-orange', path: '/maps'}"/>
         <sidebar-item :link="{name: 'Reports', icon: 'ni ni-chart-bar-32 text-green', path: '/tables'}"/>
         <sidebar-item :link="{name: 'User Profile', icon: 'ni ni-single-02 text-yellow', path: '/profile'}"/>

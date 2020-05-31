@@ -1,6 +1,6 @@
 <template>
     <component :is="tag"
-               :type="tag === 'button' ? nativeType: ''"
+               :type="tag === 'submit' ? nativeType: ''"
                @click="handleClick"
                class="btn"
                :class="classes">
