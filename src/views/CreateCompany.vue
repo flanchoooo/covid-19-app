@@ -86,7 +86,7 @@
                           latitute: 0,
                       }).then((response) => {
                           if(response.data.status !== 200){
-                              console.log(response)
+                            
                               this.description = this.name + " " + "company profile successfully created.";;
                           }else {
                               console.log(response)
